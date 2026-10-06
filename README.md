@@ -27,7 +27,7 @@ The math is derived in **Maple** and simulated in **MATLAB / Simulink**. This is
 
 **Link lengths:** L1 = 2 m, L2 = 2 m, a2 = 1 m, L3 = 1.5 m, L4 = 1 m, L5 = 0.75 m.
 
-**Masses:** m1 = 2, m2 = 2, m3 = 1, m4 = 0.5, m5 = 0.5 kg. All link inertias are 10⁻⁴ kg·m².
+**Masses:** m1 = 2, m2 = 2, m3 = 1, m4 = 0.75, m5 = 0.5 kg. All link inertias are 10⁻⁴ kg·m².
 
 Forward kinematics of the end-effector E:
 
@@ -189,8 +189,7 @@ The plot shows the joint torques and forces over the 10 s run of the sinusoidal 
 
 ## Notes
 
-- **L2 mismatch:** the forward kinematics blocks in `PTDHT_2020a.slx` and `QuyDaoLapTrinh_2020a.slx` use `L2 = 1`, while the rest of the code uses `L2 = 2`. As a result, zE in those plots is shifted down by 1 m.
-- **m4 mismatch:** the dynamics blocks use `m4 = 0.75` kg, while `Parameter5DOF.m` gives 0.5 kg.
+- **Old figure:** the forward kinematics figure above came from an earlier model version that used `L2 = 1`. Every model now uses the report's `L2 = 2`, so re-running it gives a zE curve 1 m higher.
 - **Trajectory vs. joint ranges:** the planned motion takes q1 to 5 m and q3 to 3 m. Both are past the ranges used in the workspace study.
 - **Missing report sections:** the inverse kinematics (2.4) and trajectory planning (Ch. 3) sections of the report have headings only. Run the code above to get those results.
 

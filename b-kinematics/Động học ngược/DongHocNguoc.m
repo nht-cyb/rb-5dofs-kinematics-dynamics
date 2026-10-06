@@ -3,7 +3,7 @@ clear
 clear all
 
 %% Parameters
-[L1,L2,a2,L3,L4,L5]=Parameter5DOF();
+[L1,L2,a2,L3,L4,L5]=parameter5DOF();
 
 %% Vi tri ban dau cua diem thao tac E
 xx_0=3.24;yy_0=0;zz_0=4.24;
